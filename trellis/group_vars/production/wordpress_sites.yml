@@ -5,6 +5,7 @@
 wordpress_sites:
   neticians.com:
     site_hosts:
+      - canonical: www.neticians.com
       - canonical: neticians.com
         #redirects:
         #  - www.example.com
