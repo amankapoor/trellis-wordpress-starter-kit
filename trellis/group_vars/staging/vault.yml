@@ -25,8 +25,3 @@ vault_wordpress_sites:
       secure_auth_salt: "generateme"
       logged_in_salt: "generateme"
       nonce_salt: "generateme"
-  htpasswd:
-      - name: amankapoor
-        password: "Aman@31AK"
-      - name: neticians.com
-        password: "Customer@123"
