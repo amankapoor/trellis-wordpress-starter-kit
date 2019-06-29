@@ -72,8 +72,7 @@ ansible-playbook server.yml -e env=<environment>
 ansible-playbook deploy.yml -e "site=mysite.com env=production"
 ```
 
-13. Push Database
-Link - https://github.com/valentinocossar/trellis-database-uploads-migration
+13. Push Database (Docs - https://github.com/valentinocossar/trellis-database-uploads-migration)
 ```
 ./bin/database.sh staging neticians.com push
 ```
