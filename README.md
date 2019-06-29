@@ -78,3 +78,5 @@ ansible-playbook deploy.yml -e "site=mysite.com env=production"
 
 2. Keep regularly pushing the project to git repo to keep things updated
 
+3. Use the code `xclip -sel clip < ~/.ssh/id_rsa.pub` to get SSH key for server
+
