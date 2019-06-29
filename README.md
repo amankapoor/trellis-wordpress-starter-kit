@@ -72,6 +72,17 @@ ansible-playbook server.yml -e env=<environment>
 ansible-playbook deploy.yml -e "site=mysite.com env=production"
 ```
 
+13. Push Database
+Link - https://github.com/valentinocossar/trellis-database-uploads-migration
+```
+./bin/database.sh staging neticians.com push
+```
+
+14. Push Uploads
+```
+./bin/uploads.sh staging neticians.com push
+```
+
 # Notes:
 
 1. Emails during development can be found at at http://yourdevelopmentdomain.test:8025
