@@ -1,0 +1,3 @@
+# https://github.com/ItinerisLtd/trellis-backup-during-deploy
+deploy_initialize_after:
+  - "{{ playbook_dir }}/vendor/roles/trellis-backup-during-deploy/tasks/main.yml"

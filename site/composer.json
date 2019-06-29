@@ -1,0 +1,147 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "amankapoor/wp-sync-db",
+        "version": "1.6",
+        "type": "WordPress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.dropbox.com/s/r75wwadegosb1qm/wp-sync-db.zip?dl=1"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "amankapoor/wp-sync-media",
+        "version": "1.1.5",
+        "type": "WordPress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.dropbox.com/s/ictwl90wh6ohlcd/wp-sync-media.zip?dl=1"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "amankapoor/elementor-pro",
+        "version": "2.4.8",
+        "type": "WordPress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.dropbox.com/s/hzc7sexhgh6wmc2/elementor-pro.zip?dl=1"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "amankapoor/astra",
+        "version": "1.7.2",
+        "type": "WordPress-theme",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.dropbox.com/s/7aqtd8gw6urjr4g/astra.zip?dl=1"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "amankapoor/astra-addon",
+        "version": "1.7.1",
+        "type": "WordPress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.dropbox.com/s/wj74o2r0w8xq09a/astra-addon.zip?dl=1"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "amankapoor/ultimate-elementor",
+        "version": "1.10.0",
+        "type": "WordPress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.dropbox.com/s/gxztrcbukczqrkw/ultimate-elementor_v1.10.0.zip?dl=1"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "^1.4",
+    "vlucas/phpdotenv": "^3.4.0",
+    "oscarotero/env": "^1.2.0",
+    "roots/wordpress": "5.2.2",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "amankapoor/wp-sync-db": "1.6",
+    "amankapoor/wp-sync-media": "1.1.5",
+    "wpackagist-plugin/elementor": "2.5.16",
+    "amankapoor/elementor-pro": "2.4.8",
+    "amankapoor/astra": "1.7.2",
+    "amankapoor/astra-addon": "1.7.1",
+    "amankapoor/ultimate-elementor": "1.10.0",
+    "wpackagist-plugin/duplicate-post": "3.2.2",
+    "wpackagist-plugin/duracelltomi-google-tag-manager": "1.9.2",
+    "wpackagist-plugin/tawkto-live-chat": "0.3.8",
+    "wpackagist-plugin/hide-all-notices": "0.3"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.4.2",
+    "roave/security-advisories": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}
