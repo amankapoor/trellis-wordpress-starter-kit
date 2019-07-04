@@ -90,3 +90,6 @@ ansible-playbook deploy.yml -e "site=mysite.com env=production"
 
 3. Use the code `xclip -sel clip < ~/.ssh/id_rsa.pub` to get SSH key for server
 
+4. WHen you add or remove a new plugin, then to sync the site directory, just deploy using
+`ansible-playbook deploy.yml -e "site=mysite.com env=production"`
+
